@@ -3,7 +3,10 @@ import ProjectDescription
 let project = Project(
     name: "Tutorials",
     packages: [
-        .remote(url: "https://github.com/pointfreeco/swift-composable-architecture", requirement: .upToNextMajor(from: "1.5.6"))
+        .remote(
+            url: "https://github.com/pointfreeco/swift-composable-architecture",
+            requirement: .upToNextMajor(from: "1.5.6")
+        )
     ],
     settings: .settings(
         defaultSettings: .recommended
@@ -14,7 +17,9 @@ let project = Project(
             destinations: [.iPhone, .iPad, .mac],
             product: .app,
             bundleId: "net.chorr.TCATutorial",
-            infoPlist: .default,
+            infoPlist: .extendingDefault(with: [
+                "UILaunchScreen": ""
+            ]),
             sources: [
                 "Targets/TCATutorial/Sources/**"
             ],
