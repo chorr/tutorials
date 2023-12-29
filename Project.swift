@@ -23,14 +23,20 @@ let project = Project(
                     "NSAllowsArbitraryLoads": true
                 ]
             ]),
-            sources: [
-                "Targets/TCATutorial/Sources/**"
-            ],
-            resources: [
-                "Targets/TCATutorial/Resources/**"
-            ],
+            sources: "Targets/TCATutorial/Sources/**",
+            resources: "Targets/TCATutorial/Resources/**",
             dependencies: [
                 .package(product: "ComposableArchitecture")
+            ]
+        ),
+        Target(
+            name: "TCATutorialTests",
+            destinations: [.iPhone, .iPad, .mac],
+            product: .unitTests,
+            bundleId: "net.chorr.TCATutorialTests",
+            sources: "Targets/TCATutorial/Tests/**",
+            dependencies: [
+                .target(name: "TCATutorial")
             ]
         )
     ]
