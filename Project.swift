@@ -18,7 +18,10 @@ let project = Project(
             product: .app,
             bundleId: "net.chorr.TCATutorial",
             infoPlist: .extendingDefault(with: [
-                "UILaunchScreen": ""
+                "UILaunchScreen": "",
+                "NSAppTransportSecurity": [
+                    "NSAllowsArbitraryLoads": true
+                ]
             ]),
             sources: [
                 "Targets/TCATutorial/Sources/**"
