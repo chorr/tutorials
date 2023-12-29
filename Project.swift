@@ -18,6 +18,9 @@ let project = Project(
             ],
             resources: [
                 "Targets/TCATutorial/Resources/**"
+            ],
+            dependencies: [
+                .external(name: "ComposableArchitecture")
             ]
         )
     ]

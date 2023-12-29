@@ -68,3 +68,6 @@ Derived/
 
 ### Tuist managed dependencies ###
 Tuist/Dependencies
+
+# Swift Package Manager
+.build/
