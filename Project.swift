@@ -8,10 +8,9 @@ let project = Project(
     targets: [
         Target(
             name: "TCATutorial",
-            destinations: [.iPhone, .iPad, .macWithiPadDesign],
+            destinations: [.iPhone, .iPad, .mac],
             product: .app,
             bundleId: "net.chorr.TCATutorial",
-            deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
             sources: [
                 "Targets/TCATutorial/Sources/**"
