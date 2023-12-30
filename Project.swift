@@ -13,6 +13,17 @@ let project = Project(
     ),
     targets: [
         Target(
+            name: "SwiftUITutorial",
+            destinations: [.iPhone, .iPad, .mac],
+            product: .app,
+            bundleId: "net.chorr.SwiftUITutorial",
+            infoPlist: .extendingDefault(with: [
+                "UILaunchScreen": ""
+            ]),
+            sources: "Targets/SwiftUITutorial/Sources/**",
+            resources: "Targets/SwiftUITutorial/Resources/**"
+        ),
+        Target(
             name: "TCATutorial",
             destinations: [.iPhone, .iPad, .mac],
             product: .app,
