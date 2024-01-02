@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct TutorialsApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environment(ModelData())
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .environment(ModelData())
     }
+  }
 }

@@ -1,22 +1,22 @@
 /*
-See the LICENSE.txt file for this sample’s licensing information.
+ See the LICENSE.txt file for this sample’s licensing information.
 
-Abstract:
-A view that displays a rotated version of a badge symbol.
-*/
+ Abstract:
+ A view that displays a rotated version of a badge symbol.
+ */
 
 import SwiftUI
 
 struct RotatedBadgeSymbol: View {
-    let angle: Angle
+  let angle: Angle
 
-    var body: some View {
-        BadgeSymbol()
-            .padding(-60)
-            .rotationEffect(angle, anchor: .bottom)
-    }
+  var body: some View {
+    BadgeSymbol()
+      .padding(-60)
+      .rotationEffect(angle, anchor: .bottom)
+  }
 }
 
 #Preview {
-    RotatedBadgeSymbol(angle: Angle(degrees: 5))
+  RotatedBadgeSymbol(angle: Angle(degrees: 5))
 }
