@@ -3,8 +3,8 @@ import SwiftUI
 
 @main
 struct MainApp: App {
-  static let store = Store(initialState: ContactsFeature.State()) {
-    ContactsFeature()
+  static let store = Store(initialState: AppFeature.State()) {
+    AppFeature()
   }
 
   var body: some Scene {
