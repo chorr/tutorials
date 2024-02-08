@@ -2,12 +2,6 @@ import ProjectDescription
 
 let project = Project(
   name: "Tutorials",
-  packages: [
-    .remote(
-      url: "https://github.com/pointfreeco/swift-composable-architecture",
-      requirement: .upToNextMajor(from: "1.5.6")
-    )
-  ],
   settings: .settings(
     defaultSettings: .recommended
   ),
@@ -37,7 +31,8 @@ let project = Project(
       sources: "Targets/TCATutorial/Sources/**",
       resources: "Targets/TCATutorial/Resources/**",
       dependencies: [
-        .package(product: "ComposableArchitecture")
+        .external(name: "ComposableArchitecture"),
+        .external(name: "CasePaths")
       ]
     ),
     Target(
