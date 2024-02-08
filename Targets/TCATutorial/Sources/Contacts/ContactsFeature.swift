@@ -8,9 +8,10 @@ struct Contact: Equatable, Identifiable {
 
 @Reducer
 struct ContactsFeature {
-  struct State: Equatable {
+  @ObservableState
+  struct State {
     var contacts: IdentifiedArrayOf<Contact> = []
-    @PresentationState var destination: Destination.State?
+    @Presents var destination: Destination.State?
     var path = StackState<ContactDetailFeature.State>()
   }
 
@@ -74,7 +75,8 @@ struct ContactsFeature {
 extension ContactsFeature {
   @Reducer
   struct Destination {
-    enum State: Equatable {
+    @ObservableState
+    enum State {
       case addContact(AddContactFeature.State)
       case alert(AlertState<ContactsFeature.Action.Alert>)
     }

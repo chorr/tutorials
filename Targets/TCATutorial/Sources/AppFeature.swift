@@ -2,7 +2,7 @@ import ComposableArchitecture
 
 @Reducer
 struct AppFeature {
-  struct State: Equatable {
+  struct State {
     var tab1 = CounterFeature.State()
     var tab2 = CounterFeature.State()
   }

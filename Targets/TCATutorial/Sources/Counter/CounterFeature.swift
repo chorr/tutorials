@@ -3,7 +3,8 @@ import Foundation
 
 @Reducer
 struct CounterFeature {
-  struct State: Equatable {
+  @ObservableState
+  struct State {
     var count = 0
     var fact: String?
     var isLoading = false

@@ -31,8 +31,7 @@ let project = Project(
       sources: "Targets/TCATutorial/Sources/**",
       resources: "Targets/TCATutorial/Resources/**",
       dependencies: [
-        .external(name: "ComposableArchitecture"),
-        .external(name: "CasePaths")
+        .external(name: "ComposableArchitecture")
       ]
     ),
     Target(
